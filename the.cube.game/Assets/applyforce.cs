@@ -41,10 +41,26 @@ public class applyforce : MonoBehaviour
 
         }
     }
-        private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-            collision.transform.position += Vector3.down; 
-    }
+        health objectHitHealth = collision.gameObject.GetComponent<health>();
 
+        if (objectHitHealth)
+        {
+            print("Found health script in order hit");
+            objectHitHealth.takeDamage(3);
+
+            int ObjectsMaxHealth = objectHitHealth.whatsYourMaxHealth();
+            if (ObjectsMaxHealth > 100)
+                objectHitHealth.takeDamage(100);
+        }
+        else
+        {
+            print("Didn't find the health script in object hit");
+        }
+
+
+      
+    }
 }
     
