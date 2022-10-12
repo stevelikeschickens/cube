@@ -55,7 +55,7 @@ public class Capitalcontrol : MonoBehaviour
         if (Input.GetKey(KeyCode.X))
             transform.Rotate(Vector3.left, turningSpeed * Time.deltaTime);
 
-
+       
 
 
     }
