@@ -37,7 +37,7 @@ public class applyforce : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            ourRigidBody.AddExplosionForce(500, transform.position = Vector3.down, 2);
+            ourRigidBody.AddExplosionForce(10, transform.position + 2*Vector3.down, 2);
 
         }
     }
