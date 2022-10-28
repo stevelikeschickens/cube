@@ -14,29 +14,29 @@ public class Capitalcontrol : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.W))
-        transform.position += Vector3.forward * Time.deltaTime;
+            transform.position += transform.forward * Time.deltaTime;
         
         if (Input.GetKey(KeyCode.S))
-            transform.position += Vector3.back * Time.deltaTime;
+            transform.position -= transform.forward * Time.deltaTime;
        
-        if (Input.GetKey(KeyCode.A))
-            transform.position += Vector3.left * Time.deltaTime;
-      
         if (Input.GetKey(KeyCode.D))
-            transform.position += Vector3.right * Time.deltaTime;
+            transform.position += transform.right * Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.A)) 
+            transform.position -= transform.right * Time.deltaTime;
         
        
 
-        if (Input.GetKey(KeyCode.Q))
-            transform.Rotate(Vector3.up, turningSpeed * Time.deltaTime);
-
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKey(KeyCode.J))
             transform.Rotate(Vector3.down, turningSpeed * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKey(KeyCode.L))
+            transform.Rotate(Vector3.up, turningSpeed * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.I))
             transform.Rotate(Vector3.right, turningSpeed * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.X))
+        if (Input.GetKey(KeyCode.K))
             transform.Rotate(Vector3.left, turningSpeed * Time.deltaTime);
 
        

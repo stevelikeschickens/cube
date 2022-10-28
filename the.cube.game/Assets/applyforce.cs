@@ -35,9 +35,9 @@ public class applyforce : MonoBehaviour
         {
             ourRigidBody.AddForce(Vector3.back);
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            ourRigidBody.AddExplosionForce(10, transform.position + 2*Vector3.down, 2);
+            ourRigidBody.AddExplosionForce(1000, transform.position + 2*Vector3.down, 2);
 
         }
     }
