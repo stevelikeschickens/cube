@@ -40,24 +40,7 @@ public class applyforce : MonoBehaviour
             ourRigidBody.AddExplosionForce(1000, transform.position + 2*Vector3.down, 2);
 
         }
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        health objectHitHealth = collision.gameObject.GetComponent<health>();
-
-        if (objectHitHealth)
-        {
-            print("Found health script in order hit");
-            objectHitHealth.takeDamage(3);
-
-            int ObjectsMaxHealth = objectHitHealth.whatsYourMaxHealth();
-            if (ObjectsMaxHealth > 100)
-                objectHitHealth.takeDamage(100);
-        }
-        else
-        {
-            print("Didn't find the health script in object hit");
-        }
+    
 
 
       
